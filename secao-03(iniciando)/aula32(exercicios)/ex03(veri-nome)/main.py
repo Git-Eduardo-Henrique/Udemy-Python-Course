@@ -5,7 +5,9 @@ print(20 * "=-=")
 print(nome)
 print(20 * "=-=")
 
-if n_tam <= 4:
+if n_tam <= 1:
+    print("Digite um nome maior que 1 caractere")
+elif n_tam <= 4:
     print(f"seu nome é pequeno e tem {n_tam} letras")
 elif n_tam <= 6:
     print(f"seu nome é normal e tem {n_tam} letras")
