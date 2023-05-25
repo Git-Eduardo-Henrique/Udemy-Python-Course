@@ -12,6 +12,7 @@ while cont < 10:
         print("erro ao mostrar esse numero")
         print(30 * "=-=")
         
+        # ignora o proximo codigo
         continue
 
     print(f"contador em: {cont}")
