@@ -17,3 +17,10 @@ removido = lista2.pop() # deleta o ultimo valor
 print(f"segunda lista: {lista2}")
 print(f"valor removido: {removido}")
 print(30 * "-=-")
+
+lista3 = lista1 + lista2
+print(f"lista 1 + lista 2 com o primeiro metodo: {lista3}")
+
+lista1.extend(lista2) # junta duas listas
+print(f"lista1 juntando com a lista2: {lista1}")
+print(30 * "-=-")
