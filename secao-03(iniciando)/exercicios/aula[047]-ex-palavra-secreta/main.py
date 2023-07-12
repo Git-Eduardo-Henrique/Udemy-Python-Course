@@ -1,3 +1,4 @@
+import os
 senha = "segredo"
 
 letras_acertadas = ""
@@ -13,8 +14,6 @@ while True:
 
     if letra_digitada in senha:
         letras_acertadas += letra_digitada
-
-    import os
     
     nova_palavra = ""
     for letras_senha in senha:
