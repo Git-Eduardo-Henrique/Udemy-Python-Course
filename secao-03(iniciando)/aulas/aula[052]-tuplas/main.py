@@ -9,4 +9,3 @@ lista = ["Python", "Udemy", "Course"]
 new_tupla = tuple(lista)
 print(f"lista transformada tupla: {new_tupla}")
 print(30 * "\033[32m=-=\033[m", "\033[m")
-
