@@ -1,5 +1,5 @@
 # criar função
-def soma(x=0, y=0):
+def soma(x, y):
     print(f"{x} + {y} = {x + y}")
 
 print(30 * "\033[31m=-=", "\033[m")

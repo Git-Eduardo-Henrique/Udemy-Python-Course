@@ -1,6 +1,6 @@
 # criar função
 # x - y = parametros
-def soma(x=0, y=0):
+def soma(x, y):
     print(f"{x} + {y} = {x + y}")
 
 # os numeros depois do x e y são argumentos
