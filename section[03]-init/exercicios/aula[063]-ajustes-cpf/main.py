@@ -1,4 +1,4 @@
-import re
+from re import sub
 
 # 746.824.890-70
 dois_digitos = []
@@ -9,7 +9,7 @@ print(30 * "\033[34m=-=\033[m", "\033[m")
 cpf = str(input("digite um cpf (ex: 222.222.222-22): "))
 
 # usado para formatar
-cpf = re.sub(r'[^0-9]', "", cpf)
+cpf = sub(r'[^0-9]', "", cpf)
 
 # para checar se todos os digitos são iguais
 checar_cpf_igual = cpf[0] * len(cpf)
