@@ -15,4 +15,5 @@ print(30 * "\033[34m=-=", "\033[m")
 print(f"valor normal: {valor}")
 func1()
 func2()
+
 print(30 * "\033[34m=-=", "\033[m")
