@@ -1,15 +1,25 @@
+import re
+
 # 746.824.890-70
-# 984.264.930-09
 dois_digitos = []
 soma1 = soma2 = 0
-cpf_gerado = ""
+cpf_gerado = checar_cpf_igual = ""
 
-print(30 * "\033[33m=-=\033[m", "\033[m")
-cpf = str(input("digite um cpf (ex: 222.222.222-22): ")).replace(".", "").replace("-", "")
-print(30 * "\033[33m=-=\033[m", "\033[m")
+print(30 * "\033[34m=-=\033[m", "\033[m")
+cpf = str(input("digite um cpf (ex: 222.222.222-22): "))
+
+# usado para formatar
+cpf = re.sub(r'[^0-9]', "", cpf)
+
+# para checar se todos os digitos são iguais
+checar_cpf_igual = cpf[0] * len(cpf)
+
+print(30 * "\033[34m=-=\033[m", "\033[m")
 
 if len(cpf) != 11:
     print("\033[31mCPF LONGO OU CURTO DEMAIS!!!\033[m")
+elif cpf == checar_cpf_igual:
+    print("\033[31mDIGITOS DO CPF NÃO PODEM SER TODOS IGUAIS\033[m")
 else:
     # validadando digito 1 e 2
     index = 0
@@ -42,11 +52,11 @@ else:
 
 
     print(f"cpf digitado: {cpf} \ncpf gerado: {cpf_gerado}")
-    print(30 * "\033[33m=-=\033[m", "\033[m")
+    print(30 * "\033[34m=-=\033[m", "\033[m")
 
     if cpf == cpf_gerado:
         print("CPF VALIDADO!!")
     else:
         print("\033[31mCPF INVALIDO!!!\033[m")
 
-print(30 * "\033[33m=-=\033[m", "\033[m")
+print(30 * "\033[34m=-=\033[m", "\033[m")
