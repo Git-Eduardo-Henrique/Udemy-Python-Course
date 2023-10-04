@@ -1,4 +1,4 @@
-from modulo_package.modulo import soma
+from modulo_package import soma
 
 num1 = num2 = 0
 
