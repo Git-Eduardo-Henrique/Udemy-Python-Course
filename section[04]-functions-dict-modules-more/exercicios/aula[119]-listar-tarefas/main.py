@@ -4,21 +4,39 @@ from modulo_tarefas import showlist, showmenu, addlast
 tarefas = []
 desfeito = []
 
-while True:
+running = True
+while running:
     opt = showmenu()
     system("cls")
 
-    if opt == "1":
-        showlist(tarefas)
-    elif opt == "2":
-        addlast(tarefas, desfeito)
-        showlist(tarefas)
-    elif opt == "3":
-        addlast(desfeito, tarefas)
-        showlist(tarefas)
-    elif opt == "0":
-        break
+    comandos = {
+        "1": lambda: showlist(tarefas),
+        "2": lambda: addlast(tarefas, desfeito),
+        "3": lambda: addlast(desfeito, tarefas),
+        "adicionar": lambda: tarefas.append(opt)
+    }
+
+    if opt == "0":
+            break
+
+    if comandos.get(opt) is not None:
+        comando = comandos.get(opt)
     else:
-        tarefas.append(opt)
+        comando = comandos["adicionar"]
+
+    comando()
+
+    # if opt == "1":
+    #     showlist(tarefas)
+    # elif opt == "2":
+    #     addlast(tarefas, desfeito)
+    #     showlist(tarefas)
+    # elif opt == "3":
+    #     addlast(desfeito, tarefas)
+    #     showlist(tarefas)
+    # elif opt == "0":
+    #     break
+    # else:
+    #     tarefas.append(opt)
         
 print("saindo...")
