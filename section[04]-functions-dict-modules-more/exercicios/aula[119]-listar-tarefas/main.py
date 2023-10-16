@@ -1,7 +1,7 @@
 from os import system
-from modulo_tarefas import showlist, showmenu, addlast
+from modulo_tarefas import showlist, showmenu, addlast, jsonsave, jsonload
 
-tarefas = []
+tarefas = jsonload()
 desfeito = []
 
 running = True
@@ -25,6 +25,7 @@ while running:
         comando = comandos["adicionar"]
 
     comando()
+    jsonsave(tarefas=tarefas)
 
     # if opt == "1":
     #     showlist(tarefas)
@@ -38,5 +39,5 @@ while running:
     #     break
     # else:
     #     tarefas.append(opt)
-        
+                
 print("saindo...")
